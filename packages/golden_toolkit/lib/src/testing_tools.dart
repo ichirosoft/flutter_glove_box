@@ -244,9 +244,10 @@ Future<void> compareWithGolden(
   final fileName = fileNameFactory(name, device);
   final originalWindowSize = tester.binding.window.physicalSize;
 
-  if (!shouldSkipGoldenGeneration) {
-    await tester.waitForAssets();
-  }
+  // skip wait for asserts
+  //if (!shouldSkipGoldenGeneration) {
+  //await tester.waitForAssets();
+  //}
 
   await pumpAfterPrime(tester);
 
